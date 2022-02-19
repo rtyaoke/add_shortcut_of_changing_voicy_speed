@@ -9,12 +9,12 @@
 window.onload=function(){
 
   // shortcut.jsのインポート用に、DOM要素を作成
-  let script = document.createElement('script');
+  const script = document.createElement('script');
   script.src = 'https://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js';
 
   // shortcut.jsが読み込み完了してからショートカット登録
   script.onload = function() {
-    let op = {
+    const op = {
       'type':'keydown',
       'propagate':false,
       'disable_in_input':true,
@@ -22,12 +22,12 @@ window.onload=function(){
     }
     // 再生スピードUP用。↓の"E"を任意のショートカットキーに変更する。
     shortcut.add("E",function() {
-      let speed_btn = document.querySelector("button.speed");
+      const speed_btn = document.querySelector("button.speed");
       speed_btn.click();
     },op);
     // 再生スピードDOWN用。↓の"Q"を任意のショートカットキーに変更する。
     shortcut.add("Q",function() {
-      let speed_btn = document.querySelector("button.speed");
+      const speed_btn = document.querySelector("button.speed");
       speed_btn.click();
       speed_btn.click();
       speed_btn.click();
